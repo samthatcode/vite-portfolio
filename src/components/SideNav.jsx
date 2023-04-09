@@ -20,7 +20,7 @@ const SideNav = () => {
       <AiOutlineBars
         size={30}
         onClick={handleNav}
-        className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold fill-[#001b5e] "
+        className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold fill-[#001b5e] hover:scale-110 "
       />
       {nav ? (
         <div className="w-full fixed h-screen bg-white flex flex-col justify-center items-center z-20 ">
@@ -71,37 +71,51 @@ const SideNav = () => {
       )}
 
       <div className="md:block hidden fixed top-[25%] z-10">
+        {/* <div class="hover:text-blue-500" title="My Icon">
+            <i class="fas fa-star"></i>
+          </div>
+          */}
         <div className="flex flex-col">
-          <a
-            href="#main"
-            className="rounded-full shadow-lg bg-gray-200  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
-          >
-            <AiOutlineHome size={20} />
-          </a>
-          <a
-            href="#work"
-            className="rounded-full shadow-lg bg-gray-200  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
-          >
-            <GrProjects size={20} />
-          </a>
-          <a
-            href="#projects"
-            className="rounded-full shadow-lg bg-gray-200  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
-          >
-            <AiOutlineProject size={20} />
-          </a>
-          <a
-            href="#main"
-            className="rounded-full shadow-lg bg-gray-200  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
-          >
-            <BsPerson size={20} />
-          </a>
-          <a
-            href="#contact"
-            className="rounded-full shadow-lg bg-gray-200  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
-          >
-            <AiOutlineMail size={20} />
-          </a>
+          <div className="flex hover:text-blue-500">
+            <a
+              href="#main"
+              className="rounded-full shadow-lg bg-gray-200  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+            >
+              <AiOutlineHome size={20} />
+            </a>
+          </div>
+          <div className="flex hover:text-blue-500">
+            <a
+              href="#work"
+              className="rounded-full shadow-lg bg-gray-200  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+            >
+              <GrProjects size={20} />
+            </a>
+          </div>
+          <div className="flex hover:text-blue-500">
+            <a
+              href="#projects"
+              className="rounded-full shadow-lg bg-gray-200  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+            >
+              <AiOutlineProject size={20} />
+            </a>
+          </div>
+          <div className="flex hover:text-blue-500">
+            <a
+              href="#main"
+              className="rounded-full shadow-lg bg-gray-200  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+            >
+              <BsPerson size={20} />
+            </a>
+          </div>
+          <div className="flex hover:text-blue-500">
+            <a
+              href="#contact"
+              className="rounded-full shadow-lg bg-gray-200  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+            >
+              <AiOutlineMail size={20} />
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -49,19 +49,34 @@ const Main = () => {
           </div>
           <div className="text-[#001b52] flex justify-between pt-6 max-w-[300px] w-full ">
             <a href="http://twitter.com/samthatcode/">
-              <FaTwitter className="cursor-pointer" size={25} />
+              <FaTwitter
+                className="cursor-pointer hover:text-[#001b99] hover:scale-110 ease-in duration-200"
+                size={25}
+              />
             </a>
             <a href="http://github.com/samthatcode/">
-              <FaGithub className="cursor-pointer" size={25} />
+              <FaGithub
+                className="cursor-pointer hover:text-[#001b99] hover:scale-110 ease-in duration-200"
+                size={25}
+              />
             </a>
             <a href="https://web.facebook.com/samuel.osho.5245/">
-              <FaFacebookF className="cursor-pointer" size={25} />
+              <FaFacebookF
+                className="cursor-pointer hover:text-[#001b99] hover:scale-110 ease-in duration-200"
+                size={25}
+              />
             </a>
             <a href="http://www.linkedin.com/in/samuel-osho-574808189/">
-              <FaLinkedinIn className="cursor-pointer" size={25} />
+              <FaLinkedinIn
+                className="cursor-pointer hover:text-[#001b99] hover:scale-110 ease-in duration-200"
+                size={25}
+              />
             </a>
             <a href="https://wa.me/2347063305295">
-              <FaWhatsapp className="cursor-pointer" size={25} />
+              <FaWhatsapp
+                className="cursor-pointer hover:text-[#001b99] hover:scale-110 ease-in duration-200"
+                size={25}
+              />
             </a>
           </div>
         </div>
