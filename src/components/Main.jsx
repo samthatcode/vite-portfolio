@@ -48,31 +48,51 @@ const Main = () => {
             />
           </div>
           <div className="text-[#001b52] flex justify-between pt-6 max-w-[300px] w-full ">
-            <a href="http://twitter.com/samthatcode/">
+            <a
+              href="http://www.twitter.com/samthatcode/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaTwitter
                 className="cursor-pointer hover:text-[#001b99] hover:scale-110 ease-in duration-200"
                 size={25}
               />
             </a>
-            <a href="http://github.com/samthatcode/">
+            <a
+              href="http://www.github.com/samthatcode/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaGithub
                 className="cursor-pointer hover:text-[#001b99] hover:scale-110 ease-in duration-200"
                 size={25}
               />
             </a>
-            <a href="https://web.facebook.com/samuel.osho.5245/">
+            <a
+              href="https://www.facebook.com/samuel.osho.5245/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaFacebookF
                 className="cursor-pointer hover:text-[#001b99] hover:scale-110 ease-in duration-200"
                 size={25}
               />
             </a>
-            <a href="http://www.linkedin.com/in/samuel-osho-574808189/">
+            <a
+              href="http://www.linkedin.com/in/samuel-osho-574808189/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaLinkedinIn
                 className="cursor-pointer hover:text-[#001b99] hover:scale-110 ease-in duration-200"
                 size={25}
               />
             </a>
-            <a href="https://wa.me/2347063305295">
+            <a
+              href="https://wa.me/2347063305295"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FaWhatsapp
                 className="cursor-pointer hover:text-[#001b99] hover:scale-110 ease-in duration-200"
                 size={25}
