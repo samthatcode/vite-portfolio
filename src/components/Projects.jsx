@@ -1,9 +1,8 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
-import img1 from "../assets/images/img1.png";
-import img2 from "../assets/images/img2.png";
-import img3 from "../assets/images/img3.png";
-import img4 from "../assets/images/img4.png";
+import pvcpipe from "../assets/images/pvc-pipe.png";
+import weatherapp from "../assets/images/weather-app.png";
+import cryptoapp from "../assets/images/crypto-app.png";
 
 const Projects = () => {
   return (
@@ -25,19 +24,23 @@ const Projects = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ProjectItem img={img1} title="PVC-PIPE" />
+            <ProjectItem img={pvcpipe} title="PVC-PIPE" />
           </a>
           <a
             href="http://samthatcode-weather-app.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ProjectItem img={img4} title="Weather App" />
+            <ProjectItem img={weatherapp} title="Weather App" />
+          </a>
+          <a
+            href="https://cryptoworldgecko-app.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectItem img={cryptoapp} title="Crypto API App" />
           </a>
           {/* <a href="http://" target="_blank" rel="noopener noreferrer">
-            <ProjectItem img={img3} title="Third App" />
-          </a>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
             <ProjectItem img={img4} title="Sketch App" />
           </a> */}
         </div>
