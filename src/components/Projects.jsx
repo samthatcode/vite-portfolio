@@ -3,6 +3,7 @@ import ProjectItem from "./ProjectItem";
 import pvcpipe from "../assets/images/pvc-pipe.png";
 import weatherapp from "../assets/images/weather-app.png";
 import cryptoapp from "../assets/images/crypto-app.png";
+import netflixapp from "../assets/images/netflix-app.png";
 
 const Projects = () => {
   return (
@@ -40,9 +41,13 @@ const Projects = () => {
           >
             <ProjectItem img={cryptoapp} title="Crypto API App" />
           </a>
-          {/* <a href="http://" target="_blank" rel="noopener noreferrer">
-            <ProjectItem img={img4} title="Sketch App" />
-          </a> */}
+          <a
+            href="https://netflix-webapp-clone.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectItem img={netflixapp} title="Netflix Clone App" />
+          </a>
         </div>
       </div>
     </div>
