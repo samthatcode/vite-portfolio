@@ -4,6 +4,7 @@ import pvcpipe from "../assets/images/pvc-pipe.png";
 import weatherapp from "../assets/images/weather-app.png";
 import cryptoapp from "../assets/images/crypto-app.png";
 import netflixapp from "../assets/images/netflix-app.png";
+import aiprompt from "../assets/images/ai-prompt.png";
 
 const Projects = () => {
   return (
@@ -25,28 +26,35 @@ const Projects = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ProjectItem img={pvcpipe} title="PVC-PIPE" />
+            <ProjectItem img={pvcpipe} title="PVC-PIPE" framework="react" />
           </a>
           <a
             href="http://samthatcode-weather-app.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ProjectItem img={weatherapp} title="Weather App" />
+            <ProjectItem img={weatherapp} title="Weather App" framework="react" />
           </a>
           <a
             href="https://cryptoworldgecko-app.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ProjectItem img={cryptoapp} title="Crypto API App" />
+            <ProjectItem img={cryptoapp} title="Crypto API App" framework="react" />
           </a>
           <a
             href="https://netflix-webapp-clone.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ProjectItem img={netflixapp} title="Netflix Clone App" />
+            <ProjectItem img={netflixapp} title="Netflix Clone App" framework="react" />
+          </a>
+          <a
+            href="https://ai-prompt-app.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectItem img={aiprompt} title="Ai Prompt App" framework="nextjs" />
           </a>
         </div>
       </div>

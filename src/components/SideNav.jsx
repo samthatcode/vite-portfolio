@@ -4,7 +4,7 @@ import {
   AiOutlineHome,
   AiOutlineProject,
   AiOutlineMail,
-  // AiOutlineClose
+  AiOutlineClose,
 } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import { GrProjects } from "react-icons/gr";
@@ -17,13 +17,28 @@ const SideNav = () => {
 
   return (
     <div>
-      <AiOutlineBars
-        size={30}
-        onClick={handleNav}
-        className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold fill-[#001b5e] hover:scale-110 "
-      />
+      {/* Nav Toggle */}
       {nav ? (
-        <div className="w-full fixed h-screen bg-white flex flex-col justify-center items-center z-20 ">
+        <AiOutlineClose
+          size={30}
+          onClick={() => setNav(!nav)}
+          className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold fill-[#001b5e]"
+        />
+      ) : (
+        <AiOutlineBars
+          size={30}
+          onClick={() => setNav(!nav)}
+          className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold fill-[#001b5e]"
+        />
+      )}
+
+      {nav ? (
+        <div
+          className={`w-full fixed h-screen bg-white flex flex-col justify-center items-center z-20 transform transition-transform duration-300 ease-in-out ${
+            nav ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          {/* Mobile nav items */}
           <a
             onClick={handleNav}
             href="#main"
@@ -65,16 +80,10 @@ const SideNav = () => {
             <span className="pl-4">Contact</span>
           </a>
         </div>
-      ) : (
-        ""
-        // <AiOutlineClose  className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold fill-[#001b5e] " />
-      )}
+      ) : null}
 
+      {/* Desktop nav items */}
       <div className="md:block hidden fixed top-[25%] z-10">
-        {/* <div class="hover:text-blue-500" title="My Icon">
-            <i class="fas fa-star"></i>
-          </div>
-          */}
         <div className="flex flex-col">
           <div className="flex hover:text-blue-500">
             <a
