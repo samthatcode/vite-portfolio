@@ -1,10 +1,11 @@
 import React from "react";
 import ProjectItem from "./ProjectItem";
-import pvcpipe from "../assets/images/pvc-pipe.png";
-import weatherapp from "../assets/images/weather-app.png";
-import cryptoapp from "../assets/images/crypto-app.png";
-import netflixapp from "../assets/images/netflix-app.png";
-import aiprompt from "../assets/images/ai-prompt.png";
+import pvcPipe from "../assets/images/pvc-pipe.png";
+import weatherApp from "../assets/images/weather-app.png";
+import cryptoApp from "../assets/images/crypto-app.png";
+import netflixApp from "../assets/images/netflix-app.png";
+import aiPrompt from "../assets/images/ai-prompt.png";
+import todoApp from "../assets/images/todo-app.png";
 
 const Projects = () => {
   return (
@@ -17,44 +18,73 @@ const Projects = () => {
           Projects
         </h1>
         <p className=" text-center font-medium text-xl text-stone-700 py-8">
-          I have worked on several projects that showcase my skills in different
-          areas of expertise. These projects include:
+          I have worked on several projects that demonstrate my proficiency in
+          various areas of expertise. These projects include building full-stack
+          applications with React, Next.js, and Firebase as the backend,
+          resulting in a complete stack app. I have also developed CRUD
+          applications and integrated APIs into some of my projects.
         </p>
+
         <div className=" grid sm:grid-cols-2 gap-12">
-          <a
-            href="http://pvc-pipe.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ProjectItem img={pvcpipe} title="PVC-PIPE" framework="react" />
-          </a>
           <a
             href="http://samthatcode-weather-app.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ProjectItem img={weatherapp} title="Weather App" framework="react" />
+            <ProjectItem
+              img={weatherApp}
+              title="Weather App"
+              framework="react"
+            />
           </a>
+
           <a
-            href="https://cryptoworldgecko-app.netlify.app"
+            href="https://todo-crudfirebase-app.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ProjectItem img={cryptoapp} title="Crypto API App" framework="react" />
-          </a>
-          <a
-            href="https://netflix-webapp-clone.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ProjectItem img={netflixapp} title="Netflix Clone App" framework="react" />
+            <ProjectItem img={todoApp} title="Todo App" framework="react" />
           </a>
           <a
             href="https://ai-prompt-app.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ProjectItem img={aiprompt} title="Ai Prompt App" framework="nextjs" />
+            <ProjectItem
+              img={aiPrompt}
+              title="Ai Prompt App"
+              framework="nextjs"
+            />
+          </a>
+          <a
+            href="http://pvc-pipe.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectItem img={pvcPipe} title="PVC-PIPE" framework="react" />
+          </a>
+
+          <a
+            href="https://cryptoworldgecko-app.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectItem
+              img={cryptoApp}
+              title="Crypto API App"
+              framework="react"
+            />
+          </a>
+          <a
+            href="https://netflix-webapp-clone.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectItem
+              img={netflixApp}
+              title="Netflix Clone App"
+              framework="react"
+            />
           </a>
         </div>
       </div>
