@@ -8,6 +8,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -47,6 +48,11 @@ const Contact = () => {
     } catch (error) {
       console.log("Form submission failed:", error);
     }
+    setIsSubmitted(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsSubmitted(false);
   };
 
   return (
@@ -141,6 +147,22 @@ const Contact = () => {
             Send Message
           </button>
         </form>
+        {isSubmitted && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white p-8 rounded-lg max-w-xs w-full">
+              <p className="text-xl font-bold text-gray-800 mb-4">Success!</p>
+              <p className="text-green-700">
+                Your message has been sent successfully.
+              </p>
+              <button
+                className="bg-[#001b5e] text-white px-4 py-2 mt-4 rounded"
+                onClick={handleCloseModal}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
