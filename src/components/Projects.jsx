@@ -17,7 +17,7 @@ const Projects = () => {
         <h1 className="  text-4xl font-bold text-center text-[#001b52]">
           Projects
         </h1>
-        <p className=" text-center font-medium text-xl text-stone-700 py-8">
+        <p className=" text-center font-medium text-sm text-stone-700 py-8">
           I have worked on several projects that demonstrate my proficiency in
           various areas of expertise. These projects include building full-stack
           applications with React, Next.js, and Firebase as the backend,
