@@ -59,10 +59,10 @@ const Footer = () => {
             />
           </a>
         </div>
-        <p className="font-sans font-semibold text-xl text-center pt-10 text-[#001b52]">
+        <p className="font-sans font-semibold md:text-xl text-sm text-center pt-10 text-[#001b52]">
           Made with &hearts; by samthatcode
         </p>
-        <p className="font-sans font-semibold text-xl text-center  text-[#001b52]">
+        <p className="font-sans font-semibold md:text-xl text-sm text-center  text-[#001b52]">
           &#169; All right reserved. 2023
         </p>
       </div>
