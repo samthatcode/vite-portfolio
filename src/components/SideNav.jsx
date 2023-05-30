@@ -8,6 +8,7 @@ import {
 } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import { GrProjects } from "react-icons/gr";
+import { FaCode } from "react-icons/fa";
 
 const SideNav = () => {
   const [nav, setNav] = useState(false);
@@ -24,25 +25,28 @@ const SideNav = () => {
   return (
     <div>
       {/* Nav Toggle */}
-      {nav ? (
-        <AiOutlineClose
-          size={30}
-          onClick={() => setNav(!nav)}
-          className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold fill-[#001b5e]"
-        />
-      ) : (
-        <AiOutlineBars
-          size={30}
-          onClick={() => setNav(!nav)}
-          className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold fill-[#001b5e]"
-        />
-      )}
+      <div className="flex justify-between items-center bg-[#001b5e57] fixed top-0 left-0 w-full h-16 px-4 z-[99]">
+        <div className="flex items-center">
+          <h1 className="text-gray-100 text-xl font-bold flex items-center justify-center"><FaCode size={40}/> &nbsp;samthatcode</h1>
+        </div>
+        {nav ? (
+          <AiOutlineClose
+            size={30}
+            onClick={() => setNav(!nav)}
+            className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold text-gray-50 "
+          />
+        ) : (
+          <AiOutlineBars
+            size={30}
+            onClick={() => setNav(!nav)}
+            className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold text-gray-50"
+          />
+        )}
+      </div>
 
       {nav ? (
         <div
-          className={`w-full fixed h-screen bg-white flex flex-col justify-center items-center z-20 transform transition-transform duration-300 ease-in-out ${
-            nav ? "translate-x-0" : "-translate-x-full"
-          }`}
+          className={`w-full fixed h-screen bg-white flex flex-col justify-center items-center z-20 transform transition-transform duration-300 ease-in-out`}
         >
           {/* Mobile nav items */}
           <a
@@ -79,7 +83,6 @@ const SideNav = () => {
           </a>
           <a
             onClick={handleResumeClick}
-        
             className="w-[75%] flex justify-center items-center rounded shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <BsPerson size={20} />
@@ -146,7 +149,6 @@ const SideNav = () => {
           <div className="flex hover:text-blue-500">
             <a
               onClick={handleResumeClick}
-             
               className="rounded-full shadow-lg bg-gray-200  m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
             >
               <BsPerson size={30} />
