@@ -5,3 +5,54 @@
 * {
   scroll-behavior: smooth;
 }
+
+/* Resume iframe */
+/* Functions */
+/* const handleResumeClose = () => {
+    if (resumeWindow) {
+      resumeWindow.close();
+    }
+    setShowResume(false);
+  };
+  
+  const handleResumeClick = () => {
+    setShowResume(true);
+    
+  };
+  
+  */
+
+      /* {showResume && (
+        <div className="fixed top-0 left-0 z-50 w-screen h-screen bg-gray-800 bg-opacity-70 flex justify-center items-center">
+          <div className="relative w-full h-full">
+            <div
+              className="absolute top-20 left-4 z-50 text-red-700 cursor-pointer"
+              onClick={() => setShowResume(false)}
+            >
+              <AiOutlineClose size={30} />
+            </div>
+            <div className="flex justify-center items-center h-full">
+              <iframe
+                src="https://docs.google.com/viewer?url=https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&embedded=true"
+                width="100%"
+                height="100%"
+                title="Resume"
+              ></iframe>
+            </div>
+            <div className="flex justify-center mt-4">
+              <button
+                onClick={handleResumeDownload}
+                className="mr-2 px-4 py-2 hover:bg-[#001b52] font-semibold text-white rounded bg-blue-600 focus:outline-none"
+              >
+                Download Resume
+              </button>
+              <button
+                onClick={handleResumeClose}
+                className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 focus:outline-none font-semibold"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )} */

@@ -13,12 +13,18 @@ import { FaCode } from "react-icons/fa";
 const SideNav = () => {
   const [nav, setNav] = useState(false);
   const [showResume, setShowResume] = useState(false);
+  const [resumeWindow, setResumeWindow] = useState(null);
 
   const handleNav = () => {
     setNav(!nav);
   };
-
+  
   const handleResumeClick = () => {
+    const newWindow = window.open(
+      "https://docs.google.com/viewer?url=https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&embedded=true",
+      "_blank"
+    );
+    setResumeWindow(newWindow);
     setShowResume(true);
   };
 
@@ -27,12 +33,9 @@ const SideNav = () => {
       "https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&export=download",
       "_blank"
     );
-  };
-
-  const handleResumeClose = () => {
-    setShowResume(false);
     window.close();
-  };
+  };  
+  
 
   return (
     <div>
@@ -48,7 +51,7 @@ const SideNav = () => {
 
           <button
             onClick={handleResumeDownload}
-            className="bg-[#001b52] font-semibold hover:bg-blue-600 text-white rounded px-4 py-2 md:hidden ml-[150px]"
+            className="hover:bg-[#001b52] font-semibold bg-blue-600 text-white rounded px-4 py-2 md:hidden ml-[70px]"
           >
             Download Resume
           </button>
@@ -115,42 +118,7 @@ const SideNav = () => {
         </div>
       ) : null}
 
-      {/* Resume iframe */}
-      {showResume && (
-        <div className="fixed top-0 left-0 z-50 w-screen h-screen bg-gray-800 bg-opacity-70 flex justify-center items-center">
-          <div className="relative w-full h-full">
-            <div
-              className="absolute top-20 left-4 z-50 text-red-700 cursor-pointer"
-              onClick={() => setShowResume(false)}
-            >
-              <AiOutlineClose size={30} />
-            </div>
-            <div className="flex justify-center items-center h-full">
-              <iframe
-                src="https://docs.google.com/viewer?url=https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&embedded=true"
-                width="100%"
-                height="100%"
-                title="Resume"
-              ></iframe>
-            </div>
-            <div className="flex justify-center mt-4">
-              <button
-                onClick={handleResumeDownload}
-                className="mr-2 px-4 py-2 bg-[#001b52] font-semibold text-white rounded hover:bg-blue-600 focus:outline-none"
-              >
-                Download Resume
-              </button>
-              <button
-                onClick={handleResumeClose}
-                className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 focus:outline-none font-semibold"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
+      
       {/* Desktop nav items */}
       <div className="md:block hidden fixed top-[25%] z-10">
         <div className="flex flex-col">
@@ -200,7 +168,7 @@ const SideNav = () => {
       <div className="fixed top-0 right-0 h-16 px-4 flex items-center z-[99]">
         <button
           onClick={handleResumeDownload}
-          className="px-4 py-2 bg-[#001b52] font-semibold text-white rounded hover:bg-blue-600 hidden md:block focus:outline-none"
+          className="px-4 py-2 hover:bg-[#001b52] font-semibold text-white rounded bg-blue-600 hidden md:block focus:outline-none"
         >
           Download Resume
         </button>
