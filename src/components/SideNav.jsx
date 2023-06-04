@@ -12,30 +12,17 @@ import { FaCode } from "react-icons/fa";
 
 const SideNav = () => {
   const [nav, setNav] = useState(false);
-  const [showResume, setShowResume] = useState(false);
-  const [resumeWindow, setResumeWindow] = useState(null);
 
   const handleNav = () => {
     setNav(!nav);
   };
-  
+
   const handleResumeClick = () => {
-    const newWindow = window.open(
+    window.open(
       "https://docs.google.com/viewer?url=https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&embedded=true",
       "_blank"
     );
-    setResumeWindow(newWindow);
-    setShowResume(true);
   };
-
-  const handleResumeDownload = () => {
-    window.open(
-      "https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&export=download",
-      "_blank"
-    );
-    window.close();
-  };  
-  
 
   return (
     <div>
@@ -49,12 +36,13 @@ const SideNav = () => {
             </h1>
           </a>
 
-          <button
-            onClick={handleResumeDownload}
-            className="hover:bg-[#001b52] font-semibold bg-blue-600 text-white rounded px-4 py-2 md:hidden ml-[70px]"
+          <a
+            href="https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&export=download"
+            download="resume.pdf"
+            className="hover:bg-[#001b52] font-semibold bg-blue-600 text-white rounded px-4 py-2 md:hidden ml-[60px]"
           >
             Download Resume
-          </button>
+          </a>
         </div>
         {nav ? (
           <AiOutlineClose
@@ -113,12 +101,11 @@ const SideNav = () => {
             className="w-[75%] flex justify-center items-center rounded shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <BsPerson size={20} />
-            <span className="pl-4">Resume</span>
+            <span className="pl-4">View Resume</span>
           </a>
         </div>
       ) : null}
 
-      
       {/* Desktop nav items */}
       <div className="md:block hidden fixed top-[25%] z-10">
         <div className="flex flex-col">
@@ -166,11 +153,14 @@ const SideNav = () => {
       </div>
       {/* Download Resume Button */}
       <div className="fixed top-0 right-0 h-16 px-4 flex items-center z-[99]">
-        <button
-          onClick={handleResumeDownload}
-          className="px-4 py-2 hover:bg-[#001b52] font-semibold text-white rounded bg-blue-600 hidden md:block focus:outline-none"
-        >
-          Download Resume
+        <button>
+          <a
+            href="https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&export=download"
+            download="resume.pdf"
+            className="px-4 py-2 hover:bg-[#001b52] font-semibold text-white rounded bg-blue-600 hidden md:block focus:outline-none"
+          >
+            Download Resume
+          </a>
         </button>
       </div>
     </div>
