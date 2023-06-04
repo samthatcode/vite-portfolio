@@ -6,6 +6,7 @@ import cryptoApp from "../assets/images/crypto-app.png";
 import netflixApp from "../assets/images/netflix-app.png";
 import aiPrompt from "../assets/images/ai-prompt.png";
 import todoApp from "../assets/images/todo-app.png";
+import familyGuy from "../assets/images/familyGuy.png";
 
 const Projects = () => {
   return (
@@ -22,7 +23,8 @@ const Projects = () => {
           various areas of expertise. These projects include building full-stack
           applications with React, Next.js, and Firebase as the backend,
           resulting in a complete stack app. I have also developed CRUD
-          applications and integrated APIs into some of my projects.
+          applications and integrated APIs into some of my projects using the
+          MERN stack!.
         </p>
 
         <div className=" grid sm:grid-cols-2 gap-12">
@@ -53,6 +55,17 @@ const Projects = () => {
             <ProjectItem
               img={aiPrompt}
               title="Ai Prompt App"
+              framework="nextjs"
+            />
+          </a>
+          <a
+            href="https://next-fullstack-quiz-app.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectItem
+              img={familyGuy}
+              title="Family Guy with Quiz"
               framework="nextjs"
             />
           </a>

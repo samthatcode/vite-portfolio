@@ -22,18 +22,42 @@ const SideNav = () => {
     setShowResume(true);
   };
 
+  const handleResumeDownload = () => {
+    window.open(
+      "https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&export=download",
+      "_blank"
+    );
+  };
+
+  const handleResumeClose = () => {
+    setShowResume(false);
+    window.close();
+  };
+
   return (
     <div>
       {/* Nav Toggle */}
       <div className="flex justify-between items-center bg-[#001b5e57] fixed top-0 left-0 w-full h-16 px-4 z-[99]">
         <div className="flex items-center">
-          <h1 className="text-gray-100 text-xl font-bold flex items-center justify-center"><FaCode size={40}/> &nbsp;samthatcode</h1>
+          <a href="/">
+            <h1 className="text-gray-100 text-xl font-bold flex items-center justify-center ">
+              <FaCode size={35} />
+              {/* &nbsp;samthatcode */}
+            </h1>
+          </a>
+
+          <button
+            onClick={handleResumeDownload}
+            className="bg-[#001b52] font-semibold hover:bg-blue-600 text-white rounded px-4 py-2 md:hidden ml-[150px]"
+          >
+            Download Resume
+          </button>
         </div>
         {nav ? (
           <AiOutlineClose
             size={30}
             onClick={() => setNav(!nav)}
-            className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold text-gray-50 "
+            className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold text-gray-50"
           />
         ) : (
           <AiOutlineBars
@@ -96,17 +120,33 @@ const SideNav = () => {
         <div className="fixed top-0 left-0 z-50 w-screen h-screen bg-gray-800 bg-opacity-70 flex justify-center items-center">
           <div className="relative w-full h-full">
             <div
-              className="absolute top-4 left-4 z-50 text-red-700 cursor-pointer"
+              className="absolute top-20 left-4 z-50 text-red-700 cursor-pointer"
               onClick={() => setShowResume(false)}
             >
               <AiOutlineClose size={30} />
             </div>
-            <iframe
-              src="https://docs.google.com/viewer?url=https://drive.google.com/uc?id=1h_9ZYUOoGB8qzuNJ2nXE7ZEmLTxzLO0Z&embedded=true"
-              width="100%"
-              height="100%"
-              title="Resume"
-            ></iframe>
+            <div className="flex justify-center items-center h-full">
+              <iframe
+                src="https://docs.google.com/viewer?url=https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&embedded=true"
+                width="100%"
+                height="100%"
+                title="Resume"
+              ></iframe>
+            </div>
+            <div className="flex justify-center mt-4">
+              <button
+                onClick={handleResumeDownload}
+                className="mr-2 px-4 py-2 bg-[#001b52] font-semibold text-white rounded hover:bg-blue-600 focus:outline-none"
+              >
+                Download Resume
+              </button>
+              <button
+                onClick={handleResumeClose}
+                className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600 focus:outline-none font-semibold"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       )}
@@ -155,6 +195,15 @@ const SideNav = () => {
             </a>
           </div>
         </div>
+      </div>
+      {/* Download Resume Button */}
+      <div className="fixed top-0 right-0 h-16 px-4 flex items-center z-[99]">
+        <button
+          onClick={handleResumeDownload}
+          className="px-4 py-2 bg-[#001b52] font-semibold text-white rounded hover:bg-blue-600 hidden md:block focus:outline-none"
+        >
+          Download Resume
+        </button>
       </div>
     </div>
   );
