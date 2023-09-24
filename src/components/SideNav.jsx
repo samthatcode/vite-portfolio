@@ -8,7 +8,7 @@ import {
 } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import { GrProjects } from "react-icons/gr";
-import { FaCode } from "react-icons/fa";
+import { FaBars, FaCode } from "react-icons/fa";
 
 const SideNav = () => {
   const [nav, setNav] = useState(false);
@@ -19,7 +19,7 @@ const SideNav = () => {
 
   const handleResumeClick = () => {
     window.open(
-      "https://docs.google.com/viewer?url=https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&embedded=true",
+      "https://docs.google.com/viewer?url=https://drive.google.com/uc?id=1e6yZtYrfa4W07eydOkC6B_ckKVmYJkGZ&embedded=true",
       "_blank"
     );
   };
@@ -31,15 +31,15 @@ const SideNav = () => {
         <div className="flex items-center">
           <a href="/">
             <h1 className="text-gray-100 text-xl font-bold flex items-center justify-center ">
-              <FaCode size={35} />
+              <FaCode size={25} />
               {/* &nbsp;samthatcode */}
             </h1>
           </a>
 
           <a
-            href="https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&export=download"
+            href="https://drive.google.com/uc?id=1e6yZtYrfa4W07eydOkC6B_ckKVmYJkGZ&export=download"
             download="resume.pdf"
-            className="hover:bg-[#001b52] font-semibold bg-blue-600 text-white rounded px-4 py-2 md:hidden ml-[60px]"
+            className="hover:bg-[#001b52e4] font-semibold bg-[#001b52] text-white rounded px-4 py-2 md:hidden ml-[80px]"
           >
             Download Resume
           </a>
@@ -52,9 +52,9 @@ const SideNav = () => {
           />
         ) : (
           <AiOutlineBars
-            size={30}
+            size={25}
             onClick={() => setNav(!nav)}
-            className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold text-gray-50"
+            className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-medium text-gray-50"
           />
         )}
       </div>
@@ -155,9 +155,9 @@ const SideNav = () => {
       <div className="fixed top-0 right-0 h-16 px-4 flex items-center z-[99]">
         <button>
           <a
-            href="https://drive.google.com/uc?id=1ZIQUIXtb9PGRrHWyvB7izqI2mmUY5LFO&export=download"
+            href="https://drive.google.com/uc?id=1e6yZtYrfa4W07eydOkC6B_ckKVmYJkGZ&export=download"
             download="resume.pdf"
-            className="px-4 py-2 hover:bg-[#001b52] font-semibold text-white rounded bg-blue-600 hidden md:block focus:outline-none"
+            className="px-4 py-2 hover:bg-[#001b52e4] font-semibold bg-[#001b52] text-white rounded hidden md:block focus:outline-none"
           >
             Download Resume
           </a>

@@ -7,18 +7,20 @@ import netflixApp from "../assets/images/netflix-app.png";
 import aiPrompt from "../assets/images/ai-prompt.png";
 import todoApp from "../assets/images/todo-app.png";
 import familyGuy from "../assets/images/familyGuy.png";
+import getLinked from "../assets/images/get-linked.png";
+import sureFinders from "../assets/images/sure-finders.png";
 
 const Projects = () => {
   return (
     <div className="py-10 bg-zinc-200">
       <div
         id="projects"
-        className=" bg-indigo-100  shadow-xl shadow-gray-400 rounded-xl max-w-[1040px] m-auto md:pl-20 p-4 py-16 "
+        className="bg-indigo-100  shadow-xl shadow-gray-400 rounded-xl max-w-[1040px] m-auto md:pl-20 p-4 py-16 "
       >
-        <h1 className="  text-4xl font-bold text-center text-[#001b52]">
+        <h1 className="text-4xl font-bold text-center text-[#001b52]">
           Projects
         </h1>
-        <p className=" text-center font-medium text-sm text-stone-700 py-8">
+        <p className="text-center font-medium text-sm md:text-xl text-stone-700 py-8">
           I have worked on several projects that demonstrate my proficiency in
           various areas of expertise. These projects include building full-stack
           applications with React, Next.js, and Firebase as the backend,
@@ -27,7 +29,7 @@ const Projects = () => {
           MERN stack!.
         </p>
 
-        <div className=" grid sm:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-6">
           <a
             href="http://samthatcode-weather-app.netlify.app"
             target="_blank"
@@ -39,14 +41,36 @@ const Projects = () => {
               framework="react"
             />
           </a>
-
           <a
-            href="https://todo-crudfirebase-app.netlify.app"
+            href="http://pvc-pipe.org"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ProjectItem img={todoApp} title="Todo App" framework="react" />
+            <ProjectItem img={pvcPipe} title="PVC-PIPE" framework="react" />
           </a>
+          <a
+            href="https://surefinders-frontend.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectItem
+              img={sureFinders}
+              title="SureFinders Real Estates"
+              framework="react"
+            />
+          </a>
+          <a
+            href="https://get-linked-task.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectItem
+              img={getLinked}
+              title="GetLinked Tech Hackathon 1.0"
+              framework="react"
+            />
+          </a>
+
           <a
             href="https://ai-prompt-app.vercel.app"
             target="_blank"
@@ -65,16 +89,9 @@ const Projects = () => {
           >
             <ProjectItem
               img={familyGuy}
-              title="Family Guy with Quiz"
+              title="Full Stack Family Guy with Quiz"
               framework="nextjs"
             />
-          </a>
-          <a
-            href="http://pvc-pipe.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ProjectItem img={pvcPipe} title="PVC-PIPE" framework="react" />
           </a>
 
           <a
@@ -84,7 +101,7 @@ const Projects = () => {
           >
             <ProjectItem
               img={cryptoApp}
-              title="Crypto API App"
+              title="Full Stack Crypto API App"
               framework="react"
             />
           </a>
@@ -95,9 +112,16 @@ const Projects = () => {
           >
             <ProjectItem
               img={netflixApp}
-              title="Netflix Clone App"
+              title="Full Stack Netflix Clone App"
               framework="react"
             />
+          </a>
+          <a
+            href="https://todo-crudfirebase-app.netlify.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectItem img={todoApp} title="Todo App" framework="react" />
           </a>
         </div>
       </div>

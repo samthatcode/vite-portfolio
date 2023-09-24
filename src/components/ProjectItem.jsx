@@ -9,10 +9,10 @@ const ProjectItem = ({ img, title, framework }) => {
           {title}
         </h3>
         {framework === 'nextjs' && (
-          <p className="pb-4 pt-2 text-[#001b5e] font-extrabold text-3xl text-center">Next.js</p>
+          <p className="pb-4 pt-2 text-[#001b5e] font-extrabold md:text-3xl text-base text-center">Next.js</p>
         )}
         {framework === 'react' && (
-          <p className="pb-4 pt-2 text-[#001b5e] font-extrabold text-3xl text-center">React.js</p>
+          <p className="pb-4 pt-2 text-[#001b5e] font-extrabold md:text-3xl text-base text-center">React.js</p>
         )}
 
         <p className="text-center p-3 rounded-lg bg-white text-gray-700 font-bold cursor-pointer text-lg">
