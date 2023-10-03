@@ -9,6 +9,7 @@ import todoApp from "../assets/images/todo-app.png";
 import familyGuy from "../assets/images/familyGuy.png";
 import getLinked from "../assets/images/get-linked.png";
 import sureFinders from "../assets/images/sure-finders.png";
+import kalles from "../assets/images/kalles.png";
 
 const Projects = () => {
   return (
@@ -80,6 +81,17 @@ const Projects = () => {
               img={aiPrompt}
               title="Ai Prompt App"
               framework="nextjs"
+            />
+          </a>
+          <a
+            href="https://kalles-frontend.onrender.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ProjectItem
+              img={kalles}
+              title="Kalles Online Store"
+              framework="react"
             />
           </a>
           <a
