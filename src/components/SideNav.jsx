@@ -30,9 +30,9 @@ const SideNav = () => {
       <div className="flex justify-between items-center bg-[#001b5e57] fixed top-0 left-0 w-full h-16 px-4 z-[99]">
         <div className="flex items-center">
           <a href="/">
-            <h1 className="text-gray-100 text-xl font-bold flex items-center justify-center ">
-              <FaCode size={25} />
-              {/* &nbsp;samthatcode */}
+            <h1 className="text-[#001b52e4] text-xl font-bold flex items-center justify-center ">
+              {/* <FaCode size={25} /> */}
+              &nbsp;versionControlDev <span className="text-indigo-800">()</span>
             </h1>
           </a>
 
