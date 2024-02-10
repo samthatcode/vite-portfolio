@@ -27,35 +27,40 @@ const SideNav = () => {
   return (
     <div>
       {/* Nav Toggle */}
-      <div className="flex justify-between items-center bg-[#001b5e57] fixed top-0 left-0 w-full h-16 px-4 z-[99]">
+      <div className="flex justify-between items-center bg-[#e5e7ee57] fixed top-0 left-0 w-full h-16 px-2 z-[99]">
         <div className="flex items-center">
           <a href="/">
             <h1 className="text-[#001b52e4] text-xl font-bold flex items-center justify-center ">
               {/* <FaCode size={25} /> */}
-              &nbsp;versionControlDev <span className="text-indigo-800">()</span>
+              versionControlDev{" "}
+              <span className="text-red-700 font-bold ">( )</span>
             </h1>
           </a>
 
-          <a
+          {/* <a
             href="https://drive.google.com/uc?id=1e6yZtYrfa4W07eydOkC6B_ckKVmYJkGZ&export=download"
             download="resume.pdf"
             className="hover:bg-[#001b52e4] font-semibold bg-[#001b52] text-white rounded px-4 py-2 md:hidden ml-[80px]"
           >
             Download Resume
-          </a>
+          </a> */}
         </div>
         {nav ? (
-          <AiOutlineClose
-            size={30}
-            onClick={() => setNav(!nav)}
-            className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold text-gray-50"
-          />
+          <div>
+            <AiOutlineClose
+              size={40}
+              onClick={() => setNav(!nav)}
+              className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-semibold text-[#520400]"
+            />
+          </div>
         ) : (
-          <AiOutlineBars
-            size={25}
-            onClick={() => setNav(!nav)}
-            className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-medium text-gray-50"
-          />
+          <div>
+            <AiOutlineBars
+              size={40}
+              onClick={() => setNav(!nav)}
+              className="fixed top-4 right-4 z-[99] md:hidden cursor-pointer ease-in duration-200 font-medium text-[#001b52]"
+            />
+          </div>
         )}
       </div>
 
