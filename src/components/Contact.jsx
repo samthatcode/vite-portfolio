@@ -160,17 +160,17 @@ const Contact = () => {
           </button>
         </form>
         {isSubmitted && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-8 rounded-lg max-w-md text-center w-full">
-              <p className="text-xl font-bold text-gray-800 mb-4">Success!</p>
+          <div className={`fixed inset-0 flex items-center justify-center bg-black bg-opacity-50`}>
+            <div className={`bg-white p-8 rounded-lg max-w-md text-center w-full`}>
+              <p className={`text-xl font-bold text-gray-800 mb-4`}>Success!</p>
               <p className="text-green-700">
                 Your message has been sent successfully.
               </p>
               <button
-                className="bg-[#001b5e] text-white px-4 py-2 mt-7 rounded"
+                className={`bg-[#001b5e] text-white px-4 py-2 mt-7 rounded`}
                 onClick={handleCloseModal}
               >
-                Close
+                Closez
               </button>
             </div>
           </div>
